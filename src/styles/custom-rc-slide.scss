@@ -1,0 +1,20 @@
+.rc-slider {
+    .rc-slider-rail {
+        background-color: #ECECEC;
+    }
+
+    .rc-slider-track,
+    .rc-slider-tracks,
+    .rc-slider-handle,
+    .rc-slider-handle:hover,
+    .rc-slider-handle.active {
+        background-color: var(--orange);
+        border-color: var(--orange);
+        opacity: 1;
+    }
+
+    .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+        border-color: var(--orange);
+        box-shadow: 0 0 0 5px #ffb8a3;
+    }
+}

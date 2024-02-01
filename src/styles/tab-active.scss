@@ -1,0 +1,103 @@
+/* 
+**
+**** Best Seller Home1
+**
+*/
+.best-seller-block .list-cate {
+    .cate-item {
+
+        &:hover,
+        &.active {
+            background-color: var(--orange);
+            color: var(--white);
+        }
+    }
+}
+
+@media (max-width: 640px) {
+
+    .menu-tab,
+    .best-seller-block .list-cate {
+        max-width: 100%;
+        width: 100%;
+        overflow-y: auto;
+    }
+}
+
+/* 
+**
+**** Arrival Home2
+**
+*/
+.has-line {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 0;
+        height: 1px;
+        background-color: var(--orange);
+        transition: all ease 0.3s;
+    }
+
+    &.line-black {
+        &::before {
+            background-color: var(--black);
+        }
+    }
+
+    &.line-orange {
+        &::before {
+            background-color: var(--orange);
+        }
+    }
+
+    &.line-white {
+        &::before {
+            background-color: var(--white);
+        }
+    }
+
+    &.active,
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &.line-2px {
+        padding-bottom: 1px;
+
+        &::before {
+            height: 2px;
+        }
+    }
+}
+
+.active {
+    .has-line {
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+/* 
+**
+**** Arrival Home3
+**
+*/
+.arrival-block.style-three {
+    .menu-tab {
+        .tab-item {
+            &.active {
+                background-color: var(--black);
+                color: var(--white);
+                border-color: var(--black);
+            }
+        }
+    }
+}

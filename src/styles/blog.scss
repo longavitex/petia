@@ -1,0 +1,52 @@
+/* 
+**
+**** Blog Item
+**
+*/
+.blog-item {
+    &:hover {
+        .bg-img img {
+            transform: translate(0) scale(1.05);
+        }
+
+        .blog-title {
+            color: var(--orange);
+        }
+    }
+}
+
+
+// blog-page
+.blog-page {
+    .list-blog {
+        @media (min-width: 640px) {
+            .blog-item {
+                &:first-child {
+                    grid-column: span 2 / span 2;
+                }
+            }
+        }
+    }
+
+    .list-recent {
+        .item {
+            &:hover {
+                .text-title {
+                    color: var(--orange);
+                }
+            }
+        }
+    }
+
+    .next-pre {
+
+        .left,
+        .right {
+            &:hover {
+                .text-title {
+                    color: var(--orange);
+                }
+            }
+        }
+    }
+}

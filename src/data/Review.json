@@ -1,0 +1,52 @@
+[
+    {
+        "id": "1",
+        "category": "smoothies",
+        "name": "Nobi Nobita",
+        "avatar": "/images/avatar/1.jpg",
+        "rate": 5,
+        "address": "Tokyo, Japan",
+        "description": "I wanted to email you and tell you how fantastic my first order was. I am so happy with the quality of the foods you provide. I will be a customer for a long time to come!",
+        "slug": "healthy-smoothies"
+    },
+    {
+        "id": "2",
+        "category": "smoothies",
+        "name": "Georgina Smith",
+        "avatar": "/images/avatar/2.jpg",
+        "rate": 4,
+        "address": "Madrid, Spain",
+        "description": "Yesterday I received my first box, I was so happy. I was very impressed by the freshness of the produce. I had tried and had to cancel because of low quality.",
+        "slug": "healthy-smoothies"
+    },
+    {
+        "id": "3",
+        "category": "smoothies",
+        "name": "Charlie Adam",
+        "avatar": "/images/avatar/3.jpg",
+        "rate": 5,
+        "address": "Manchester, UK",
+        "description": "The variety of items in my recent order exceeded my expectations. Each product was high-quality, and the delivery was prompt. Will definitely be a repeat customer!",
+        "slug": "healthy-smoothies"
+    },
+    {
+        "id": "4",
+        "category": "smoothies",
+        "name": "Christin Ha",
+        "avatar": "/images/avatar/4.jpg",
+        "rate": 5,
+        "address": "California, USA",
+        "description": "As someone who values organic and fresh produce, I'm thrilled with the quality of the items I received. The packaging was excellent in perfect condition.",
+        "slug": "healthy-smoothies"
+    },
+    {
+        "id": "5",
+        "category": "smoothies",
+        "name": "Alex Pavard",
+        "avatar": "/images/avatar/5.jpg",
+        "rate": 4,
+        "address": "Paris, France",
+        "description": "After trying several services, this one stands out. The fruits was not only fresh but also had a great taste. The ordering process was smooth, the delivery was on time.",
+        "slug": "healthy-smoothies"
+    }
+]

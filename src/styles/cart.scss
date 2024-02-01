@@ -1,0 +1,31 @@
+.cart-product {
+    .list-product {
+        .item {
+            .left {
+                &:hover {
+                    .name {
+                        color: var(--orange);
+                    }
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @media (max-width: 639.98px) {
+        .container {
+            .content-main {
+                overflow: auto;
+
+                >div {
+                    width: 650px;
+                    max-width: 650px;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.block-input {
+    position: relative;
+
+    input {
+        border: none;
+        border-bottom: 1px solid var(--line);
+        transition: all ease 0.3s;
+
+        &:focus {
+            border-color: var(--black);
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 0;
+        bottom: 4px;
+        color: var(--secondary);
+        transition: all ease 0.3s;
+    }
+
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+        bottom: 28px;
+    }
+}
