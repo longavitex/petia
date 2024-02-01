@@ -1,64 +1,74 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const Banner = () => {
+    const router = useRouter()
+
+    const handleCategoryClick = (category: string) => {
+        router.push(`/shop/shop-grid-sidebar?category=${category}`);
+    };
+
     return (
         <>
-            <div className="banner-block md:pt-20 pt-12">
-                <div className="content-main flex max-lg:flex-wrap max-2xl:h-[300px] max-lg:h-[580px] max-md:h-[420px]">
-                    <div className="left lg:w-1/2 w-full max-lg:h-1/2 relative">
-                        <div className="bg-img h-full">
+            <div className="category-block style-two md:pt-20 pt-12">
+                <div className="container">
+                    <div className="list-cate grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px]">
+                        <div
+                            className="item rounded-xl overflow-hidden relative cursor-pointer"
+                            onClick={() => handleCategoryClick('grains')}
+                        >
                             <Image
-                                src={'/images/other/bg-banner2-1.png'}
+                                src={'/images/category/cate4-1.png'}
                                 width={2000}
-                                height={2000}
-                                alt='bg'
+                                height={1500}
+                                alt='cate'
                                 priority={true}
-                                className='w-full h-full object-cover'
+                                className='w-full duration-500'
                             />
-                        </div>
-                        <div className="text-content absolute top-1/2 -translate-y-1/2 sm:right-14 right-6 flex flex-col items-center">
-                            <div className="text-button text-center flex items-center justify-center relative text-white">
-                                <Image
-                                    src={'/images/other/bg-text-heading.png'}
-                                    width={300}
-                                    height={200}
-                                    alt='bg'
-                                    priority={true}
-                                    className='md:w-[174px] w-[140px]'
-                                />
-                                <span className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap'>New arrivals</span>
+                            <div className="text-content z-[2] absolute left-7 top-1/2 -translate-y-1/2">
+                                <div className="text-caption-uppercase text-white">New products</div>
+                                <div className="md:text-3xl text-2xl text-white mt-3">Fresh Fruice</div>
+                                <div className="text-caption text-white has-line line-white line-2px active inline-block uppercase mt-3">Shop now</div>
                             </div>
-                            <div className="text-heading text-center text-white mt-3">Discover Real <br />Organic Flavors</div>
-                            <Link href={'/shop/shop-grid-sidebar'} className='text-button uppercase text-center text-white underline mt-4'>Shop now</Link>
                         </div>
-                    </div>
-                    <div className="right lg:w-1/2 w-full max-lg:h-1/2 relative">
-                        <div className="bg-img h-full">
+                        <div
+                            className="item rounded-xl overflow-hidden relative cursor-pointer"
+                            onClick={() => handleCategoryClick('grains')}
+                        >
                             <Image
-                                src={'/images/other/bg-banner2-2.png'}
+                                src={'/images/category/cate4-2.png'}
                                 width={2000}
-                                height={2000}
-                                alt='bg'
+                                height={1500}
+                                alt='cate'
                                 priority={true}
-                                className='w-full h-full object-cover'
+                                className='w-full duration-500'
                             />
-                        </div>
-                        <div className="text-content absolute top-1/2 -translate-y-1/2 sm:left-14 left-6 flex flex-col items-center">
-                            <div className="text-button text-center flex items-center justify-center relative text-white">
-                                <Image
-                                    src={'/images/other/bg-text-heading.png'}
-                                    width={300}
-                                    height={200}
-                                    alt='bg'
-                                    priority={true}
-                                    className='md:w-[174px] w-[140px]'
-                                />
-                                <span className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap'>Summer sale</span>
+                            <div className="text-content z-[2] absolute left-7 top-1/2 -translate-y-1/2">
+                                <div className="text-caption-uppercase text-white">Sale of 30%</div>
+                                <div className="md:text-3xl text-2xl text-white mt-3">Organic Oats</div>
+                                <div className="text-caption text-white has-line line-white line-2px active inline-block uppercase mt-3">Shop now</div>
                             </div>
-                            <div className="text-heading text-center text-white mt-3">Sale off 30% <br />Daily Special Offers</div>
-                            <Link href={'/shop/shop-grid-sidebar'} className='text-button uppercase text-center text-white underline mt-4'>Shop now</Link>
+                        </div>
+                        <div
+                            className="item rounded-xl overflow-hidden relative cursor-pointer max-lg:hidden max-sm:block"
+                            onClick={() => handleCategoryClick('grains')}
+                        >
+                            <Image
+                                src={'/images/category/cate4-3.png'}
+                                width={2000}
+                                height={1500}
+                                alt='cate'
+                                priority={true}
+                                className='w-full duration-500'
+                            />
+                            <div className="text-content z-[2] absolute left-7 top-1/2 -translate-y-1/2">
+                                <div className="text-caption-uppercase text-white">Special recipe</div>
+                                <div className="md:text-3xl text-2xl text-white mt-3">Fruits Dried</div>
+                                <div className="text-caption text-white has-line line-white line-2px active inline-block uppercase mt-3">Shop now</div>
+                            </div>
                         </div>
                     </div>
                 </div>

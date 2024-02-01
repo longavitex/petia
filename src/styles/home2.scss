@@ -1,13 +1,26 @@
-.category-block {
-    &.style-two {
-        .list-cate {
-            position: relative;
+.category-block.style-two {
+    .list-cate {
+        .item {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba($color: #000000, $alpha: 0.4);
+                opacity: 0;
+                transition: all ease 0.4s;
+                z-index: 1;
+            }
 
-            .item {
-                &:hover {
-                    img {
-                        transform: scale(1.08);
-                    }
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+
+                img {
+                    transform: scale(1.06);
                 }
             }
         }
@@ -26,7 +39,7 @@
 
         .custom-swiper-button-prev,
         .custom-swiper-button-next {
-            top: calc(50% - 24px);
+            top: calc(50% + 24px);
             transform: translateY(-50%);
             position: absolute;
             font-size: 24px;
@@ -55,6 +68,14 @@
 
             .custom-swiper-button-next {
                 right: 0px;
+            }
+        }
+
+        &.style-pb12 {
+
+            .custom-swiper-button-prev,
+            .custom-swiper-button-next {
+                top: calc(50% - 24px);
             }
         }
     }

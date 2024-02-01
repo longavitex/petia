@@ -80,11 +80,6 @@ const MenuTwo = () => {
                         Homepage Two
                       </Link>
                     </li>
-                    <li>
-                      <Link href="/homepages/home3" className='text-button duration-300'>
-                        Homepage Three
-                      </Link>
-                    </li>
                   </ul>
                 </li>
                 <li className='h-full relative'>
@@ -230,12 +225,7 @@ const MenuTwo = () => {
                           </li>
                           <li>
                             <Link href="/homepages/home2" className={`nav-item-mobile link duration-300 ${pathname === '/homepages/home2' ? 'active' : ''}`}>
-                              Home Fruits Vegetables
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="/homepages/home3" className={`nav-item-mobile link duration-300`}>
-                              Home Grains & nuts
+                              Home Two
                             </Link>
                           </li>
                         </ul>

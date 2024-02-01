@@ -41,7 +41,7 @@ const ArrivalOrganic: React.FC<Props> = ({ data, limit }) => {
                                 ))}
                             </div>
                         </div>
-                        <div className="list-product style-outline relative mt-5">
+                        <div className="list-product style-outline style-pb12 relative mt-5">
                             <div className="custom-swiper-button-prev">
                                 <Icon.CaretLeft />
                             </div>
