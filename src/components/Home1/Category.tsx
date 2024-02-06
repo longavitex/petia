@@ -19,7 +19,7 @@ const Category = () => {
         <>
             <div className="category-block style-one md:pt-20 pt-12">
                 <div className="container">
-                    <div className="text-heading text-center">Shop by Categories</div>
+                    <div className="text-heading text-center">Shop by Species</div>
                     <div className="list-cate md:mt-10 mt-6">
                         <Swiper
                             spaceBetween={24}

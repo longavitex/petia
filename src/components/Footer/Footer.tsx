@@ -98,7 +98,7 @@ const Footer: React.FC<Props> = ({ borderTop }) => {
                             <div className="item flex flex-col">
                                 <div className="text-button pb-3">Contact info</div>
                                 <Link className='text-caption text-secondary hover:text-orange duration-200 w-fit' href={'#!'}>+32 821 435 333</Link>
-                                <Link className='text-caption text-secondary hover:text-orange duration-200 w-fit pt-2' href={'#!'}>orgafresh@gmail.com</Link>
+                                <Link className='text-caption text-secondary hover:text-orange duration-200 w-fit pt-2' href={'#!'}>petia@gmail.com</Link>
                                 <Link className='text-caption text-secondary hover:text-orange duration-200 w-fit pt-2' href={'#!'}>21 Lenin St., Moscow</Link>
                             </div>
                         </div>

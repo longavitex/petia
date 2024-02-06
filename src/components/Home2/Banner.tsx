@@ -21,7 +21,7 @@ const Banner = () => {
                             onClick={() => handleCategoryClick('grains')}
                         >
                             <Image
-                                src={'/images/category/cate4-1.png'}
+                                src={'/images/category/cate2-1.png'}
                                 width={2000}
                                 height={1500}
                                 alt='cate'
@@ -30,7 +30,7 @@ const Banner = () => {
                             />
                             <div className="text-content z-[2] absolute left-7 top-1/2 -translate-y-1/2">
                                 <div className="text-caption-uppercase text-white">New products</div>
-                                <div className="md:text-3xl text-2xl text-white mt-3">Fresh Fruice</div>
+                                <div className="md:text-3xl text-2xl text-white mt-3">Pet{String.raw`'s`} Bed</div>
                                 <div className="text-caption text-white has-line line-white line-2px active inline-block uppercase mt-3">Shop now</div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@ const Banner = () => {
                             onClick={() => handleCategoryClick('grains')}
                         >
                             <Image
-                                src={'/images/category/cate4-2.png'}
+                                src={'/images/category/cate2-2.png'}
                                 width={2000}
                                 height={1500}
                                 alt='cate'
@@ -48,7 +48,7 @@ const Banner = () => {
                             />
                             <div className="text-content z-[2] absolute left-7 top-1/2 -translate-y-1/2">
                                 <div className="text-caption-uppercase text-white">Sale of 30%</div>
-                                <div className="md:text-3xl text-2xl text-white mt-3">Organic Oats</div>
+                                <div className="md:text-3xl text-2xl text-white mt-3">Organic Food</div>
                                 <div className="text-caption text-white has-line line-white line-2px active inline-block uppercase mt-3">Shop now</div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ const Banner = () => {
                             onClick={() => handleCategoryClick('grains')}
                         >
                             <Image
-                                src={'/images/category/cate4-3.png'}
+                                src={'/images/category/cate2-3.png'}
                                 width={2000}
                                 height={1500}
                                 alt='cate'
@@ -65,8 +65,8 @@ const Banner = () => {
                                 className='w-full duration-500'
                             />
                             <div className="text-content z-[2] absolute left-7 top-1/2 -translate-y-1/2">
-                                <div className="text-caption-uppercase text-white">Special recipe</div>
-                                <div className="md:text-3xl text-2xl text-white mt-3">Fruits Dried</div>
+                                <div className="text-caption-uppercase text-white">Special products</div>
+                                <div className="md:text-3xl text-2xl text-white mt-3">Pet Accessories</div>
                                 <div className="text-caption text-white has-line line-white line-2px active inline-block uppercase mt-3">Shop now</div>
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 export interface BlogType {
     id: string;
     category: string;
+    species: string;
     tag: string;
     title: string;
     date: string;

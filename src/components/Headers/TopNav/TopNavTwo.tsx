@@ -14,7 +14,7 @@ const TopNavTwo = () => {
                             </div>
                             <div className="mail flex items-center gap-2 max-[450px]:hidden">
                                 <Icon.Envelope size={16} />
-                                <div className="text-caption">orgafresh@gmail.com</div>
+                                <div className="text-caption">petia@gmail.com</div>
                             </div>
                         </div>
                         <div className="right-content flex items-center gap-7 max-[450px]:text-left max-[450px]:w-full">

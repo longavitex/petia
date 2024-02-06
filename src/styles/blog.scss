@@ -38,6 +38,13 @@
         }
     }
 
+    .filter-tags {
+        .active {
+            background-color: var(--black);
+            color: var(--white);
+        }
+    }
+
     .next-pre {
 
         .left,

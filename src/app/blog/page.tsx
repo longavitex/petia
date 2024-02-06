@@ -12,6 +12,7 @@ import HandlePagination from '@/components/Other/HandlePagination'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import Footer from '@/components/Footer/Footer'
 import { useRouter } from 'next/navigation'
+import { BlogType } from '@/type/BlogType';
 
 const BlogPage = () => {
     const [currentPage, setCurrentPage] = useState(0);
@@ -21,9 +22,16 @@ const BlogPage = () => {
     const searchParams = useSearchParams()
     let dataCategory = searchParams.get('category')
     const [category, setCategory] = useState<string | null>(dataCategory);
+    const [species, setSpecies] = useState<string | null>();
 
     const handleCategory = (category: string) => {
         setCategory(prevCategory => prevCategory === category ? null : category)
+        setCurrentPage(0);
+    }
+
+    const handleSpecies = (species: string) => {
+        setSpecies(prevSpecies => prevSpecies === species ? null : species)
+        setCurrentPage(0);
     }
 
     const handleBlogClick = (blogId: string) => {
@@ -38,19 +46,25 @@ const BlogPage = () => {
             isCategoryMatched = product.category === category;
         }
 
-        return isCategoryMatched
+        let isSpeciesMatched = true;
+        if (species) {
+            isSpeciesMatched = product.species === species;
+        }
+
+        return isCategoryMatched && isSpeciesMatched
     })
 
     if (filteredData.length === 0) {
         filteredData = [{
             id: "no-data",
             category: "no-data",
+            species: "no-data",
             tag: "no-data",
             title: "no-data",
             date: "no-data",
             author: "no-data",
-            thumbImg: "no-data",
-            coverImg: "no-data",
+            thumbImg: "",
+            coverImg: "",
             subImg: [
                 "no-data",
                 "no-data"
@@ -68,7 +82,13 @@ const BlogPage = () => {
         setCurrentPage(0);
     }
 
-    const currentProducts = filteredData.slice(offset, offset + productsPerPage);
+    let currentBlog: BlogType[];
+
+    if (filteredData.length > 0) {
+        currentBlog = filteredData.slice(offset, offset + productsPerPage);
+    } else {
+        currentBlog = []
+    }
 
     const handlePageChange = (selected: number) => {
         setCurrentPage(selected);
@@ -84,8 +104,12 @@ const BlogPage = () => {
                     <div className="flex justify-between max-lg:flex-col gap-y-12">
                         <div className="left lg:w-2/3 lg:pr-4">
                             <div className="list-blog grid sm:grid-cols-2 sm:gap-y-10 gap-8">
-                                {currentProducts.map(item => (
-                                    <Blog key={item.id} data={item} type='style-main' />
+                                {currentBlog.map(item => (
+                                    item.id === 'no-data' ? (
+                                        <div key={item.id} className="no-data-product">No products match the selected criteria.</div>
+                                    ) : (
+                                        <Blog key={item.id} data={item} type='style-main' />
+                                    )
                                 ))}
                             </div>
                             {pageCount > 1 && (
@@ -104,7 +128,7 @@ const BlogPage = () => {
                             <div className="filter-category md:mt-10 mt-6">
                                 <div className="text-button-lg">Categories</div>
                                 <div className="list-cate mt-4">
-                                    {['smoothies', 'fruit', 'vegetables', 'grains'].map((item, index) => (
+                                    {['food', 'bed', 'outfit', 'toy'].map((item, index) => (
                                         <div
                                             key={index}
                                             className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === item ? 'active' : ''}`}
@@ -144,11 +168,15 @@ const BlogPage = () => {
                             <div className="filter-tags md:mt-10 mt-6">
                                 <div className="text-button-lg">Tags Cloud</div>
                                 <div className="list-tags flex items-center flex-wrap gap-3 mt-4">
-                                    <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Smoothies</div>
-                                    <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Vegetables</div>
-                                    <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Fruits</div>
-                                    <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Health</div>
-                                    <div className="tags bg-surface py-1 px-3 rounded cursor-pointer duration-300 hover:bg-black hover:text-white">Grains</div>
+                                    {['dog', 'cat', 'rabbit', 'parrot', 'mouse'].map((item, index) => (
+                                        <div
+                                            key={index}
+                                            className={`tags bg-surface py-1 px-3 rounded cursor-pointer capitalize duration-300 hover:bg-black hover:text-white ${species === item ? 'active' : ''}`}
+                                            onClick={() => handleSpecies(item)}
+                                        >
+                                            {item}
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>

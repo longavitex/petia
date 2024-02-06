@@ -82,7 +82,7 @@ const Checkout = () => {
                                 </div>
                                 <div className="flex items-center gap-1.5 mt-8">
                                     <input type="checkbox" name="saveInfor" id="saveInfor" />
-                                    <label className='text-caption' htmlFor="saveInfor">I want to receive exclusive discounts and information on the latest Orgafresh trends.</label>
+                                    <label className='text-caption' htmlFor="saveInfor">I want to receive exclusive discounts and information on the latest Petia trends.</label>
                                 </div>
                                 <button className='button-main mt-6'>Payment</button>
                             </form>

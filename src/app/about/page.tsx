@@ -37,7 +37,7 @@ const AboutUs = () => {
                             </div>
                             <div className="right lg:basis-5/12 w-full">
                                 <div className="text-content w-full">
-                                    <div className="text-heading">Welcome to Organic Store!</div>
+                                    <div className="text-heading">Welcome to Petia Store!</div>
                                     <div className="text-title text-secondary sm:mt-6 mt-4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</div>
                                     <div className="text-button-lg sm:mt-6 mt-4">{String.raw`“`}There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.{String.raw`”`}</div>
                                     <Link href={'/contact'} className="button-main sm:mt-8 mt-5">CONTACT US</Link>
